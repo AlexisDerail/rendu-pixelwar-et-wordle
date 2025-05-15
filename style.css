@@ -1,0 +1,83 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #58c0c0, #43cc65); /* Dégradé de fond */
+    color: rgb(246, 246, 246);
+    text-align: center;
+    padding: 18px;
+    min-height: 100vh;
+  }
+  h1 {
+    margin-bottom: 18px;
+  }
+  .grille {
+    display: grid;
+    grid-template-columns: repeat(5, 60px); /* 5 colonnes */
+    gap: 15px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  .case {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #3a3a3c;
+    font-size: 2em;
+    line-height: 0px;
+    text-transform: uppercase;
+    background-color: #121213;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+  .retournement {
+    animation: flip 0.6s forwards; /* Animation de retournement */
+  }
+  @keyframes flip {
+    0% { transform: rotateX(0); }
+    50% { transform: rotateX(90deg); }
+    100% { transform: rotateX(0); }
+  }
+  /* Couleurs selon le statut de la lettre */
+  .bien-place { background-color: #538d4e; border-color: #538d4e; }
+  .mal-place  { background-color: #b59f3b; border-color: #b59f3b; }
+  .incorrect  { background-color: #3a3a3c; border-color: #3a3a3c; }
+  
+  .clavier {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin: 0 auto 20px;
+    gap: 5px;
+    justify-content: center;
+  }
+  .touche {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    background: #818384;
+    color: white;
+    cursor: pointer;
+  }
+  .utilise-bien-place { background: #0bc841; }
+  .utilise-mal-place  { background: #ced414; }
+  .utilise-incorrect   { background: #471818; }
+  
+  #message {
+    font-size: 1.2em;
+    margin: 10px;
+  }
+  button#rejouer {
+    display: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background: hsl(139, 96%, 21%);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+  }
+  

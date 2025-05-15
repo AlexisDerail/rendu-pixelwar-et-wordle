@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Pixel War ue22</title>
+  
+    <link rel="stylesheet" href="./pixel-war.css" />
+
+   
+    <script src="./pixel-war.js" defer></script>
+</head>
+
+<body>
+    <div id="connect-dialog">
+        <span>
+            <label for="baseurl" class="vivid-label">Base URL :</label> 
+            <input id="baseurl" type="text"> 
+        </span>
+        <span>
+            <label for="mapid" class="vivid-label">Map ID :</label> 
+            <input id="mapid" type="text" value="0000"> 
+        </span>
+    </div>
+
+    <div id="temps-container">
+        <span id="messageTemps">⏳ Temps restant :</span> 
+        <span id="compteur">0</span> s 
+    </div>
+
+    <div id="grid"></div>
+
+   
+    <div id="controls">
+        <label for="colorpicker">Couleur :</label> 
+        <input id="colorpicker" type="color" value="#000000" title="Choisis ta couleur"> 
+        <button type="button" class="btn btn-primary" id="refresh">Rafraîchir</button> 
+    </div>
+</body>
+
+</html>
